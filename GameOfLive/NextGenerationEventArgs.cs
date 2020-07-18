@@ -1,6 +1,6 @@
 using System;
 
-namespace GameOfLive
+namespace GameOfLife.Model
 {
     public delegate void NextGenerationEventHandler(object sender, NextGenerationEventArgs args);
     

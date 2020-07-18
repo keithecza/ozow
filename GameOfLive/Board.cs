@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace GameOfLive
+namespace GameOfLife.Model
 {
     public class Board
     {
@@ -51,7 +51,7 @@ namespace GameOfLive
             {
                 for(int column = x - 1; column <= x + 1; ++column)
                 {
-                    bool mustSkipCell = row < 0 || row >= Height || column < 0 || column >= Width || (row == x && column == x);
+                    bool mustSkipCell = row < 0 || row >= Height || column < 0 || column >= Width || (row == y && column == x);
 
                     if (mustSkipCell)
                         continue;

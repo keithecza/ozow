@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "Sorting\Sorting.csproj", "{02E2131C-CBE1-40B9-AB71-C11A56B8B26B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sorting", "Sorting\Sorting.csproj", "{02E2131C-CBE1-40B9-AB71-C11A56B8B26B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting.Tests", "Sorting.Tests\Sorting.Tests.csproj", "{6ADE4883-330B-4D1B-96A3-53CC432387B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sorting.Tests", "Sorting.Tests\Sorting.Tests.csproj", "{6ADE4883-330B-4D1B-96A3-53CC432387B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestUtilities", "UnitTestUtilities\UnitTestUtilities.csproj", "{EB8737A1-C6E2-489C-98FC-E3311634D44E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestUtilities", "UnitTestUtilities\UnitTestUtilities.csproj", "{EB8737A1-C6E2-489C-98FC-E3311634D44E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLive", "GameOfLive\GameOfLive.csproj", "{38C690C2-93C5-4D03-AF39-B84CB1607BA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameOfLife.Model", "GameOfLive\GameOfLife.Model.csproj", "{38C690C2-93C5-4D03-AF39-B84CB1607BA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLife.View", "GameOfLife.View\GameOfLife.View.csproj", "{D13DBAE4-8AAD-4036-AA7B-D71769193FAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{02E2131C-CBE1-40B9-AB71-C11A56B8B26B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,5 +71,23 @@ Global
 		{38C690C2-93C5-4D03-AF39-B84CB1607BA9}.Release|x64.Build.0 = Release|Any CPU
 		{38C690C2-93C5-4D03-AF39-B84CB1607BA9}.Release|x86.ActiveCfg = Release|Any CPU
 		{38C690C2-93C5-4D03-AF39-B84CB1607BA9}.Release|x86.Build.0 = Release|Any CPU
+		{D13DBAE4-8AAD-4036-AA7B-D71769193FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D13DBAE4-8AAD-4036-AA7B-D71769193FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D13DBAE4-8AAD-4036-AA7B-D71769193FAE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D13DBAE4-8AAD-4036-AA7B-D71769193FAE}.Debug|x64.Build.0 = Debug|Any CPU
+		{D13DBAE4-8AAD-4036-AA7B-D71769193FAE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D13DBAE4-8AAD-4036-AA7B-D71769193FAE}.Debug|x86.Build.0 = Debug|Any CPU
+		{D13DBAE4-8AAD-4036-AA7B-D71769193FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D13DBAE4-8AAD-4036-AA7B-D71769193FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D13DBAE4-8AAD-4036-AA7B-D71769193FAE}.Release|x64.ActiveCfg = Release|Any CPU
+		{D13DBAE4-8AAD-4036-AA7B-D71769193FAE}.Release|x64.Build.0 = Release|Any CPU
+		{D13DBAE4-8AAD-4036-AA7B-D71769193FAE}.Release|x86.ActiveCfg = Release|Any CPU
+		{D13DBAE4-8AAD-4036-AA7B-D71769193FAE}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7234A388-312D-49C9-90DA-79B44F084620}
 	EndGlobalSection
 EndGlobal

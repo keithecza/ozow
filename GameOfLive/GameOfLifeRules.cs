@@ -1,4 +1,4 @@
-namespace GameOfLive
+namespace GameOfLife.Model
 {
     public class GameOfLifeRules
     {
@@ -12,7 +12,7 @@ namespace GameOfLive
                 {
                     int numberOfLivingNeighbours = currentGeneration.LivingNeighboursCount(column, row);
 
-                    if (numberOfLivingNeighbours == 2 || numberOfLivingNeighbours == 3 && currentGeneration.IsAlive(column, row))
+                    if ((numberOfLivingNeighbours == 2 || numberOfLivingNeighbours == 3) && currentGeneration.IsAlive(column, row))
                         newGeneration.SetCellExistence(column, row, true);
                     if (numberOfLivingNeighbours == 3 && !currentGeneration.IsAlive(column, row))
                         newGeneration.SetCellExistence(column, row, true);
