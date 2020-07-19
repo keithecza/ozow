@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameOfLife.View", "GameOfLi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameOfLife.Model.Tests", "GameOfLife.Model.Tests\GameOfLife.Model.Tests.csproj", "{A7CCCBF5-DB2D-4183-9500-7265A88D8026}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameOfLife.Model", "GameOfLive.Model\GameOfLife.Model.csproj", "{959BAFE5-9188-4AAE-AC24-E4F1727ABB17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameOfLife.Model", "GameOfLife.Model\GameOfLife.Model.csproj", "{959BAFE5-9188-4AAE-AC24-E4F1727ABB17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

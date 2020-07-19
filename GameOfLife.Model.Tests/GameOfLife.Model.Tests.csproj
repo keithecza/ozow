@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GameOfLive.Model\GameOfLife.Model.csproj" />
+    <ProjectReference Include="..\GameOfLife.Model\GameOfLife.Model.csproj" />
     <ProjectReference Include="..\UnitTestUtilities\UnitTestUtilities.csproj" />
   </ItemGroup>
 
