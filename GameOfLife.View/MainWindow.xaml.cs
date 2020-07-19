@@ -96,7 +96,7 @@ namespace GameOfLife.View
                 gameOfLife.NextGeneration += OnNextGenerationGenerated;
                 Task.Run(() =>
                 {
-                    gameOfLife.Play(_boardWidth, _boardHeight, numberOfGenerations, new GameOfLifeRules(),  initialLiveCells);
+                    gameOfLife.Play(_boardWidth, _boardHeight, numberOfGenerations, new GameOfLifeRules(),  initialLiveCells, 250);
                 });
             }
         }

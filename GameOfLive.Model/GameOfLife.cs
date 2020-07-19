@@ -7,9 +7,15 @@ namespace GameOfLife.Model
 {
     public class GameOfLife
     {
+        #region EVENTS
+
         public event NextGenerationEventHandler NextGeneration;
-        
-        public void Play(int boardWidth, int boardHeight, int numberOfGenerations, IGameOfLifeRules rules, IEnumerable<Tuple<int, int>> initialLivingCells)
+
+        #endregion
+
+        #region METHODS
+
+        public void Play(int boardWidth, int boardHeight, int numberOfGenerations, IGameOfLifeRules rules, IEnumerable<Tuple<int, int>> initialLivingCells, int delayInMS)
         {
             Debug.Assert(boardWidth > 1);
             Debug.Assert(boardHeight > 1);
@@ -36,8 +42,11 @@ namespace GameOfLife.Model
                 board = rules.ProduceNextGeneration(board);
                 NextGeneration?.Invoke(this, new NextGenerationEventArgs(board));
                 
-                Thread.Sleep(250);
+                if (delayInMS > 0)
+                    Thread.Sleep(delayInMS);
             }
         }
+
+        #endregion
     }
 }

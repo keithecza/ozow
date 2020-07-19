@@ -16,7 +16,7 @@ namespace GameOfLife.Model.Tests
         {
             var gameOfLife = new GameOfLife();
             
-            gameOfLife.Play(3, 3, 1, new MockRules(), new Tuple<int, int>[] {new Tuple<int, int>(-1,0)});
+            gameOfLife.Play(3, 3, 1, new MockRules(), new Tuple<int, int>[] {new Tuple<int, int>(-1,0)}, 0);
         }
         
         [TestMethod]
@@ -26,7 +26,7 @@ namespace GameOfLife.Model.Tests
         {
             var gameOfLife = new GameOfLife();
             
-            gameOfLife.Play(3, 3, 1, new MockRules(), new Tuple<int, int>[] {new Tuple<int, int>(3,0)});
+            gameOfLife.Play(3, 3, 1, new MockRules(), new Tuple<int, int>[] {new Tuple<int, int>(3,0)}, 0);
         }
         
         [TestMethod]
@@ -36,7 +36,7 @@ namespace GameOfLife.Model.Tests
         {
             var gameOfLife = new GameOfLife();
             
-            gameOfLife.Play(3, 3, 1, new MockRules(), new Tuple<int, int>[] {new Tuple<int, int>(0,-1)});
+            gameOfLife.Play(3, 3, 1, new MockRules(), new Tuple<int, int>[] {new Tuple<int, int>(0,-1)}, 0);
         }
         
         [TestMethod]
@@ -46,7 +46,7 @@ namespace GameOfLife.Model.Tests
         {
             var gameOfLife = new GameOfLife();
             
-            gameOfLife.Play(3, 3, 1, new MockRules(), new Tuple<int, int>[] {new Tuple<int, int>(0,3)});
+            gameOfLife.Play(3, 3, 1, new MockRules(), new Tuple<int, int>[] {new Tuple<int, int>(0,3)}, 0);
         }
         
         [TestMethod]
@@ -65,7 +65,7 @@ namespace GameOfLife.Model.Tests
             gameOfLife.Play(2, 2, 2, mockRules, 
                 new Tuple<int, int>[] {
                     new Tuple<int, int>(0,0),
-                    new Tuple<int, int>(1,1)});
+                    new Tuple<int, int>(1,1)}, 0);
             
             Assert.AreEqual(3, generatedBoards.Count);
             Assert.AreEqual(2, mockRules.NumberOfGenerations);
