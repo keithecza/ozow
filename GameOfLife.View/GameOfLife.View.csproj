@@ -29,7 +29,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GameOfLive.Model\GameOfLife.Model.csproj" />
-    <ProjectReference Include="..\GameOfLive\GameOfLife.Model.csproj" />
   </ItemGroup>
 
 </Project>
