@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Resources;
-using System.Runtime.ExceptionServices;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -9,7 +7,9 @@ namespace GameOfLife.View
 {
     internal class BoardVisualisation
     {
-        public  BoardVisualisation(FrameworkElement canvasContainer, Canvas boardCanvas)
+        #region CONSTRUCTION
+
+        public BoardVisualisation(FrameworkElement canvasContainer, Canvas boardCanvas)
         {
             _canvasContainer = canvasContainer;
             _boardCanvas = boardCanvas;
@@ -17,14 +17,9 @@ namespace GameOfLife.View
             _canvasContainer.SizeChanged += OnCanvasContainerSizeChanged;
         }
 
-        private void OnCanvasContainerSizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            if (_boardWidth > 0 && _boardHeight > 0)
-            {
-                LayoutBoard(_boardWidth, _boardHeight, out double cellSize);
-                SetCellBounds(_boardWidth, _boardHeight, cellSize);
-            }
-        }
+        #endregion
+
+        #region METHODS
 
         public void SetBoardSize(int width, int height)
         {
@@ -62,6 +57,23 @@ namespace GameOfLife.View
             _cells[row, column].SetExistence(isAlive);
         }
 
+        #endregion
+
+        #region EVENT HANDLERS
+
+        private void OnCanvasContainerSizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (_boardWidth > 0 && _boardHeight > 0)
+            {
+                LayoutBoard(_boardWidth, _boardHeight, out double cellSize);
+                SetCellBounds(_boardWidth, _boardHeight, cellSize);
+            }
+        }
+
+        #endregion
+
+        #region PRIVATE METHODS
+
         private void LayoutBoard(int boardWidth, int boardHeight, out double cellSize)
         {
             double cellHeight = (_canvasContainer.ActualHeight - 2 * BoardMargin) / boardHeight;
@@ -96,17 +108,17 @@ namespace GameOfLife.View
 
         }
 
+        #endregion
+
+        #region FIELDS
+
         private const double BoardMargin = 8.0;
-
         private readonly FrameworkElement _canvasContainer;
-
         private readonly Canvas _boardCanvas;
-
         private int _boardWidth;
-
         private int _boardHeight;
-
         private BoardCell[,] _cells;
 
+        #endregion
     }
 }

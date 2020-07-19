@@ -7,12 +7,22 @@ namespace GameOfLife.View
 {
     internal class BoardCell
     {
+        #region PROPERTIES
+
         public bool IsAlive { get; private set; }
+
+        #endregion
+
+        #region CONSTRUCTION
 
         public BoardCell(Canvas boardCanvas)
         {
             _boardCanvas = boardCanvas;
         }
+
+        #endregion
+
+        #region METHODS
 
         public void SetBounds(Rect bounds)
         {
@@ -44,6 +54,10 @@ namespace GameOfLife.View
             ShowCell(IsAlive, false);
         }
 
+        #endregion
+
+        #region EVENT HANDLERS
+
         private void OnMouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             IsAlive = !IsAlive;
@@ -60,6 +74,10 @@ namespace GameOfLife.View
             ShowCell(IsAlive, true);
         }
 
+        #endregion
+
+        #region PRIVATE METHODS
+
         private void ShowCell(bool isAlive, bool isUnderCursor)
         {
             if (isUnderCursor)
@@ -75,8 +93,13 @@ namespace GameOfLife.View
                 _rectangle.Fill = Brushes.Transparent;
         }
 
-        private Canvas _boardCanvas;
+        #endregion
 
+        #region FIELDS
+
+        private Canvas _boardCanvas;
         private Rectangle _rectangle;
+
+        #endregion
     }
 }
