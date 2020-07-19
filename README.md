@@ -14,6 +14,6 @@ The following enhancements can be made to the app
 
 ## Using GameOfLife.View
 
-[Image]
+![GameOfLife.View](GameOfLife.View.png?raw=true "GameOfLife.View")
 
 Specify With, Height and Generations. Left-click the cells to toggle their initial existence state. Alternatively, load an existing board using the dropdown. Click Run to start.
