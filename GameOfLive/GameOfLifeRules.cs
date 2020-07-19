@@ -1,9 +1,13 @@
+using System.Diagnostics;
+
 namespace GameOfLife.Model
 {
-    public class GameOfLifeRules
+    public class GameOfLifeRules : IGameOfLifeRules
     {
         public Board ProduceNextGeneration(Board currentGeneration)
         {
+            Debug.Assert(currentGeneration != null);
+
             Board newGeneration = new Board(currentGeneration.Width, currentGeneration.Height);
 
             for (int row = 0; row < currentGeneration.Height; ++row)

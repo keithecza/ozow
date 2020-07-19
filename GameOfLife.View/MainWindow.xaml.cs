@@ -43,7 +43,7 @@ namespace GameOfLife.View
                 gameOfLife.NextGeneration += OnNextGenerationGenerated;
                 Task.Run(() =>
                 {
-                    gameOfLife.Play(_boardWidth, _boardHeight, numberOfGenerations, initialLiveCells);
+                    gameOfLife.Play(_boardWidth, _boardHeight, numberOfGenerations, new GameOfLifeRules(),  initialLiveCells);
                 });
             }
         }
@@ -69,7 +69,7 @@ namespace GameOfLife.View
             return _boardWidth > 1 && _boardHeight > 1;
         }
 
-        private BoardVisualisation _boardVisualisation;
+        private readonly BoardVisualisation _boardVisualisation;
 
         private int _boardWidth;
 

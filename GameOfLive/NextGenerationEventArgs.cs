@@ -6,11 +6,19 @@ namespace GameOfLife.Model
     
     public class NextGenerationEventArgs : EventArgs
     {
+        #region PROPERTIES
+        
         public Board Board { get; }
+        
+        #endregion
+        
+        #region CONSTRUCTION
 
         public NextGenerationEventArgs(Board board)
         {
             Board = board;
         }
+        
+        #endregion
     }
 }

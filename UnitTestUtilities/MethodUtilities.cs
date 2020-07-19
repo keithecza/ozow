@@ -5,6 +5,8 @@ namespace UnitTestUtilities
 {
     public static class MethodUtilities
     {
+        #region METHODS
+        
         public static T CallInternal<T>(object instance, string name, params object[] arguments )
         {
             MethodInfo methodInfo = instance.GetType().GetMethod(name, BindingFlags.Instance | BindingFlags.NonPublic);
@@ -13,5 +15,7 @@ namespace UnitTestUtilities
                 throw new Exception($"Cannot call {name} as it is not a member of the class {instance.GetType().FullName}");
             return (T)methodInfo.Invoke(instance, arguments); 
         }
+        
+        #endregion
     }
 }

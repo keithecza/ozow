@@ -4,10 +4,16 @@ namespace GameOfLife.Model
 {
     public class Board
     {
+        #region PROPERTIES
+
         public int Width { get; }
         
         public int Height { get; }
-        
+
+        #endregion
+
+        #region CONSTRUCTION
+
         public Board(int width, int height)
         {
             Debug.Assert(width > 0);
@@ -17,7 +23,11 @@ namespace GameOfLife.Model
             Height = height;
             _cells = new bool[height, width];
         }
-        
+
+        #endregion
+
+        #region METHODS
+
         public bool IsAlive(int x, int y)
         {
             Debug.Assert(x >= 0);
@@ -35,7 +45,7 @@ namespace GameOfLife.Model
             Debug.Assert(y >= 0);
             Debug.Assert(y < Height);
             
-            _cells[y, x] = true;
+            _cells[y, x] = alive;
         }
         
         public int LivingNeighboursCount(int x, int y)
@@ -61,6 +71,13 @@ namespace GameOfLife.Model
 
             return neighbourCount;
         }
+
+        #endregion
+
+        #region FIELDS
+
         private readonly bool[,] _cells;
+
+        #endregion
     }
 }
